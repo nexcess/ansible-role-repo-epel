@@ -1,6 +1,6 @@
 # Ansible Role: EPEL Repository
 
-[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-repo-epel.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-repo-epel)
+[![CI](https://github.com/geerlingguy/ansible-role-repo-epel/workflows/CI/badge.svg?event=push)](https://github.com/geerlingguy/ansible-role-repo-epel/actions?query=workflow%3ACI)
 
 Installs the [EPEL repository](https://fedoraproject.org/wiki/EPEL) (Extra Packages for Enterprise Linux) for RHEL/CentOS.
 
@@ -16,6 +16,10 @@ Available variables are listed below, along with default values (see `defaults/m
     epel_repo_gpg_key_url: "/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-{{ ansible_distribution_major_version }}"
 
 The EPEL repo URL and GPG key URL. Generally, these should not be changed, but if this role is out of date, or if you need a very specific version, these can both be overridden.
+
+    epel_repo_disable: false
+
+Set to `true` to disable the EPEL repo (even if already installed).
 
 ## Dependencies
 
